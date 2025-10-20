@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Exo+2:wght@300;400;500;600;700&family=Audiowide&display=swap"
+        rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="cube.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <canvas id="neural-bg"></canvas>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Cubo isométrico -->
+
+                    <!-- Esquinas frontales -->
+                    <circle cx="30" cy="30" r="5" fill="#00ffff" />
+                    <circle cx="80" cy="30" r="5" fill="#ff00ff" />
+                    <circle cx="80" cy="80" r="5" fill="#ffff00" />
+                    <circle cx="30" cy="80" r="5" fill="#ff00ff" />
+
+                    <!-- Esquinas traseras -->
+                    <circle cx="50" cy="10" r="5" fill="#00ffff" />
+                    <circle cx="100" cy="10" r="5" fill="#ff00ff" />
+                    <circle cx="100" cy="60" r="5" fill="#ffff00" />
+                    <circle cx="50" cy="60" r="5" fill="#00ffff" />
+
+                    <!-- Aristas frontales -->
+                    <line x1="30" y1="30" x2="80" y2="30" stroke="#00ffff" stroke-width="2" />
+                    <line x1="80" y1="30" x2="80" y2="80" stroke="#ff00ff" stroke-width="2" />
+                    <line x1="80" y1="80" x2="30" y2="80" stroke="#ffff00" stroke-width="2" />
+                    <line x1="30" y1="80" x2="30" y2="30" stroke="#ff00ff" stroke-width="2" />
+
+                    <!-- Aristas traseras -->
+                    <line x1="50" y1="10" x2="100" y2="10" stroke="#00ffff" stroke-width="2" />
+                    <line x1="100" y1="10" x2="100" y2="60" stroke="#ff00ff" stroke-width="2" />
+                    <line x1="100" y1="60" x2="50" y2="60" stroke="#ffff00" stroke-width="2" />
+                    <line x1="50" y1="60" x2="50" y2="10" stroke="#00ffff" stroke-width="2" />
+
+                    <!-- Conexiones entre frontales y traseras -->
+                    <line x1="30" y1="30" x2="50" y2="10" stroke="#00ffff" stroke-width="2" />
+                    <line x1="80" y1="30" x2="100" y2="10" stroke="#ff00ff" stroke-width="2" />
+                    <line x1="80" y1="80" x2="100" y2="60" stroke="#ffff00" stroke-width="2" />
+                    <line x1="30" y1="80" x2="50" y2="60" stroke="#ff00ff" stroke-width="2" />
+                </svg>
+
+
+                <span class="logo-text">JPL</span>
+            </a>
+
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home">INICIO</a></li>
+                    <li><a href="#about">SOBRE MÍ</a></li>
+                    <li><a href="#projects">PROYECTOS</a></li>
+                    <li><a href="#skills">HABILIDADES</a></li>
+                    <li><a href="#contact">CONTACTO</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="JHARDEL LP">JHARDEL LP</h1>
+            <p class="subtitle">Desarrollador Web & Arquitecto Digital</p>
+
+        </div>
+        <a href="#about" class="scroll-btn">
+            <div class="scroll-btn-inner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+                </svg>
+            </div>
+        </a>
+    </section>
+
+    <section id="about" class="fade-in">
+        <h2 class="section-title">SOBRE MÍ</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <div class="profile-img-wrapper">
+                    <div class="profile-img">
+                        <span>AI</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <h3>Creando Experiencias Digitales</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                    Soy un desarrollador web apasionado, especializado en crear experiencias digitales de vanguardia que
+                    fusionan el arte con la tecnología.
+                    Mi trabajo se enfoca en construir interfaces inspiradas en redes neuronales que amplían los límites
+                    del diseño web.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">
+                    Con más de 1 año de experiencia en desarrollo frontend, tratando de perfeccionar el arte de
+                    transformar
+                    ideas complejas
+                    en aplicaciones web intuitivas y visualmente impactantes.
+                    Mi experiencia abarca desde diseño responsive hasta animaciones avanzadas e implementaciones con
+                    WebGL.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Proyectos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1+</div>
+                        <div class="stat-label">Año de Experiencia</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Clientes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="fade-in">
+        <div class="cubo-escena" id="cuboEscena">
+            <div class="cubo-3d" id="cubo3D">
+                <div class="cara frente"></div>
+                <div class="cara atras"></div>
+                <div class="cara derecha"></div>
+                <div class="cara izquierda"></div>
+                <div class="cara arriba"></div>
+                <div class="cara abajo"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="fade-in">
+        <h2 class="section-title">PROYECTOS</h2>
+        <div class="projects-grid">
+            <div class="glass-card project-card">
+                <h3 style="color: var(--primary);">Sistema de Seguimiento al Egresado</h3>
+                <p style="color: var(--text-secondary);">
+                    Plataforma para monitorear el progreso profesional de egresados y recopilar estadísticas laborales.
+                </p>
+            </div>
+            <div class="glass-card project-card">
+                <h3 style="color: var(--secondary);">Sistema de Gestión de Datos Educativos</h3>
+                <p style="color: var(--text-secondary);">
+                    Solución integral para la administración de información académica en instituciones educativas.
+                </p>
+            </div>
+            <div class="glass-card project-card">
+                <h3 style="color: var(--accent);">Sistema de Bolsa de Trabajo</h3>
+                <p style="color: var(--text-secondary);">
+                    Plataforma de empleo desarrollada para facilitar la inserción laboral desde un centro pedagógico.
+                </p>
+            </div>
+            <div class="glass-card project-card">
+                <h3 style="color: var(--primary);">Sistema de Ventas y Facturación</h3>
+                <p style="color: var(--text-secondary);">
+                    Sistema automatizado de ventas, control de inventario y generación de facturas electrónicas.
+                </p>
+            </div>
+            <div class="glass-card project-card">
+                <h3 style="color: var(--secondary);">Sistema de Servicios y Gestión TI</h3>
+                <p style="color: var(--text-secondary);">
+                    Herramienta para la administración de servicios tecnológicos, soporte y gestión de tickets TI.
+                </p>
+            </div>
+            <div class="glass-card project-card">
+                <h3 style="color: var(--accent);">API para Matrícula Universitaria</h3>
+                <p style="color: var(--text-secondary);">
+                    Desarrollo de una API RESTful para gestionar procesos de matrícula académica en una universidad.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills" class="fade-in">
+        <h2 class="section-title">HABILIDADES</h2>
+        <div class="skills-container">
+
+            <div class="skill-wrapper">
+                <div class="skill-node">
+                    <img src="ruta/html5.png" alt="HTML5">
+                    <span class="skill-tooltip">HTML5</span>
+                </div>
+            </div>
+
+            <div class="skill-wrapper">
+                <div class="skill-node">
+                    <img src="ruta/css3.png" alt="CSS3">
+                    <span class="skill-tooltip">CSS3</span>
+                </div>
+            </div>
+
+            <div class="skill-wrapper">
+                <div class="skill-node">
+                    <img src="ruta/js.png" alt="JavaScript">
+                    <span class="skill-tooltip">JavaScript</span>
+                </div>
+            </div>
+
+            <div class="skill-wrapper">
+                <div class="skill-node">
+                    <img src="ruta/ts.png" alt="TypeScript">
+                    <span class="skill-tooltip">TypeScript</span>
+                </div>
+            </div>
+
+            <div class="skill-wrapper">
+                <div class="skill-node">
+                    <img src="ruta/vue.png" alt="Vue.js">
+                    <span class="skill-tooltip">Vue.js</span>
+                </div>
+            </div>
+
+            <div class="skill-wrapper">
+                <div class="skill-node">
+                    <img src="ruta/laravel.png" alt="Laravel">
+                    <span class="skill-tooltip">Laravel</span>
+                </div>
+            </div>
+
+            <div class="skill-wrapper">
+                <div class="skill-node">
+                    <img src="ruta/sql.png" alt="SQL">
+                    <span class="skill-tooltip">SQL</span>
+                </div>
+            </div>
+
+            <div class="skill-wrapper">
+                <div class="skill-node">
+                    <img src="ruta/mysql.png" alt="MySQL">
+                    <span class="skill-tooltip">MySQL</span>
+                </div>
+            </div>
+
+            <div class="skill-wrapper">
+                <div class="skill-node">
+                    <img src="ruta/csharp.png" alt="C#">
+                    <span class="skill-tooltip">C#</span>
+                </div>
+            </div>
+
+            <div class="skill-wrapper">
+                <div class="skill-node">
+                    <img src="ruta/python.png" alt="Python">
+                    <span class="skill-tooltip">Python</span>
+                </div>
+            </div>
+
+            <div class="skill-wrapper">
+                <div class="skill-node">
+                    <img src="ruta/php.png" alt="PHP">
+                    <span class="skill-tooltip">PHP</span>
+                </div>
+            </div>
+
+            <div class="skill-wrapper">
+                <div class="skill-node">
+                    <img src="ruta/jquery.png" alt="jQuery">
+                    <span class="skill-tooltip">jQuery</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section id="contact" class="fade-in">
+        <h2 class="section-title">CONTACTO</h2>
+        <form id="contact-form" class="contact-form glass-card">
+            <div class="form-group">
+                <input type="text" name="user_name" placeholder="Tu Nombre" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="user_email" placeholder="Tu Correo Electrónico" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
+            </div>
+            <button type="submit" class="neural-btn">ENVIAR MENSAJE</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#">Diseño Web</a></li>
+                    <li><a href="#">Desarrollo UI/UX</a></li>
+                    <li><a href="#">Desarrollo Frontend</a></li>
+                    <li><a href="#">Consultoría</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Conectar</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                    Construyamos algo increíble juntos
+                </p>
+                <div class="social-links">
+                    <a href="https://instagram.com/jhardel_lp31" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Portafolio de Jhardel LP. Todos los derechos reservados.
+            </p>
+
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="cube.js"></script>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init('GLKlOYwcQQIwaling');
+
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = this.user_name.value;
+            const emailEnviar = this.user_email.value;
+            const message = this.message.value;
+
+            emailjs.send("service_6483nsn", "template_wp8az3p", {
+                title: "Nuevo mensaje desde web",
+                name: name,
+                email: emailEnviar,
+                message: "Mi email es: " + emailEnviar + " Mensaje: " + message,
+                time: new Date().toLocaleString()
+            })
+                .then(() => {
+                    alert("¡Mensaje enviado correctamente!");
+                    this.reset();
+                })
+                .catch(error => {
+                    alert("Error al enviar el mensaje. Intenta más tarde.");
+                    console.error("EmailJS catch error:", error);
+                });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
